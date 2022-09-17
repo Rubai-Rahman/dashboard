@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  
 }
 .navContainer {
   background-color: #ffff;
@@ -27,7 +26,7 @@
   width: 207px;
   height: 480px;
   margin-top: 40px;
-  position:fixed;
+  position: fixed;
 }
 .menu {
   display: flex;
@@ -66,9 +65,48 @@
   margin-left: 5px;
 }
 
-.dashboard{
-margin-left: 254px;
-margin-top: 50px;
-width: 80%;
-height:1000px;
+.dashboard {
+  margin-left: 254px;
+  margin-top: 50px;
+  width: 80%;
+  height: 1000px;
+}
+
+.components {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 15px;
+  grid-template-areas:
+    "totalSale totalSale totalSale totalSale salesChart salesChart"
+    "totalSale totalSale totalSale totalSale salesChart salesChart"
+    "product product product sales sales sales"
+    "product product product sales sales sales"
+    "product product product weather weather weather"
+    "product product product weather weather weather";
+}
+.totalSale {
+  grid-area: totalSale;
+  background-color: cyan;
+}
+.sales {
+  grid-area: sales;
+  background-color: green;
+}
+.weather {
+  grid-area: weather;
+  background-color: blue;
+}
+.product {
+  grid-area: product;
+  background-color: rgb(30, 118, 57);
+}
+.salesChart {
+  grid-area: salesChart;
+  background-color: darkkhaki;
+  height: 500px;
+}
+.header {
+  display: flex;
 }
