@@ -66,10 +66,9 @@
 }
 
 .dashboard {
-  margin-left: 254px;
-  margin-top: 50px;
   width: 80%;
   height: 1000px;
+  margin: 70px 0px 50px 264px;
 }
 
 .components {
@@ -86,27 +85,74 @@
     "product product product weather weather weather"
     "product product product weather weather weather";
 }
+.components > * {
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  /* Shadow 4 */
+
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.07),
+    0px 1.6px 3.6px rgba(0, 0, 0, 0.11);
+  border-radius: 6px;
+}
 .totalSale {
   grid-area: totalSale;
-  background-color: cyan;
 }
 .sales {
   grid-area: sales;
-  background-color: green;
 }
 .weather {
   grid-area: weather;
-  background-color: blue;
 }
 .product {
   grid-area: product;
-  background-color: rgb(30, 118, 57);
 }
 .salesChart {
   grid-area: salesChart;
-  background-color: darkkhaki;
-  height: 500px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  height: 90px;
 }
 .header {
   display: flex;
+  justify-content: space-between;
 }
+.header > button {
+  border: none;
+  margin-left: 20px;
+  font-size: 20px;
+  color:#9DACBE;
+  background-color: white;
+}
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #181818;
+  padding: 20px;
+}
+.lineChart {
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+}
+.tlist {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.number {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+}
+

@@ -1,5 +1,6 @@
 import { DatePicker } from "antd";
 import React from "react";
+import {FaEllipsisV} from "react-icons/fa"
 import {
   LineChart,
   Line,
@@ -7,7 +8,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -33,7 +33,6 @@ const pdata = [
     sale: 1900.0,
   },
   {
-    
     date: 25,
     sale: 2100.0,
   },
@@ -41,29 +40,56 @@ const pdata = [
   {
     sellName: "4JT",
     date: 28,
-    sale:3000
+    sale: 3000,
   },
 ];
 const TotalSale = () => {
   return (
-    <div className="header" style={{width:"100%",height:"100%"}}>
-      <div className="title">Total Sale</div>
-      <div className="date">
-        <DatePicker picker="month" />
-        <button>...</button>
-      </div>
     <>
-      <ResponsiveContainer width="50%" height="50%">
-        <LineChart width={300} height={100} data={pdata}>
-        <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis />
-            <Tooltip contentStyle={{borderRadius:5}} />
-            <Line type="monotone" dataKey="sale" stroke="#2D5BFF" fill="#8884d8" strokeWidth={4}  />
-          </LineChart>
-      </ResponsiveContainer>
+      <div className="header">
+        <div className="title">Total Sale</div>
+        <div style={{ height: 32, marginLeft: 30 }}>
+          <DatePicker picker="month" />
+          <button
+            style={{
+              border: "none",
+              fontSize: 20,
+              backgroundColor: "white",
+              marginLeft: 20,
+              color:"#9DACBE"
+            }}
+          >
+          <FaEllipsisV/>
+          </button>
+        </div>
+      </div>
+      <div className="element">
+        <div className="tlist ">
+          <div className="name">TV</div>
+          <div className="number">600.000</div>
+          <div className="name">Laptop</div>
+          <div className="number">1200.000</div>
+          <div className="name">Other</div>
+          <div className="number">210.000</div>
+        </div>
+        <div className="lineChart">
+          <ResponsiveContainer width="80%" height="80%">
+            <LineChart width={300} height={200} data={pdata}>
+              <XAxis dataKey="date" />
+              <YAxis />
+              <Tooltip contentStyle={{ borderRadius: 5 }} />
+              <Line
+                type="monotone"
+                dataKey="sale"
+                stroke="#2D5BFF"
+                fill="#8884d8"
+                strokeWidth={4}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
     </>
-    </div>
   );
 };
 
