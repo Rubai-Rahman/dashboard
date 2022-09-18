@@ -22,7 +22,7 @@ function App() {
         <Sidebar />
         <Routes>
           
-          <Route path="/dashboard" element={<Dashboard show={show} setShow={setShow} />} />
+          <Route exact path="/dashboard" element={<Dashboard show={show} setShow={setShow} />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/message" element={<Message/>} />

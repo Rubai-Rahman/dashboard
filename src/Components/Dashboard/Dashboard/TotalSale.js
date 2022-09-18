@@ -48,8 +48,8 @@ const TotalSale = () => {
     <>
       <div className="header">
         <div className="title">Total Sale</div>
-        <div style={{ height: 32, marginLeft: 30 }}>
-          <DatePicker picker="month" />
+        <div style={{ height: 32, marginLeft: 30,marginTop:20 }}>
+          <DatePicker picker="month" style={{width:126}} />
           <button
             style={{
               border: "none",
