@@ -117,7 +117,7 @@ const PopularProduct = () => {
                         overflow: "hidden",
                         fontSize: 20,
                         fontWeight: 500,
-                        fontColor: "#5C5C5C;",
+                        fontColor: "#5C5C5C",
                       }}
                     >
                       {item.name?.title}

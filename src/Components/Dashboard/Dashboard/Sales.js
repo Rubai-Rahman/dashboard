@@ -39,9 +39,7 @@ const Sales = () => {
         const newData = data.concat(res.results);
         setData(newData);
         setList(newData);
-        setLoading(false); // Resetting window's offsetTop so as to display react-virtualized demo underfloor.
-        // In real scene, you can using public method of react-virtualized:
-        // https://stackoverflow.com/questions/46700726/how-to-use-public-method-updateposition-of-react-virtualized
+        setLoading(false);
 
         window.dispatchEvent(new Event("resize"));
       });
@@ -82,8 +80,11 @@ const Sales = () => {
         </button>
       </div>
       <div style={{display:'flex',justifyContent:"space-between", padding:10 }}>
-        <p style={{fontSize:16,color:"#5c5c5c"}}>Monthly Sales</p>
+        <p style={{fontSize:16,color:"#5C5C5C"}}>Monthly Sales</p>
         <DatePicker style={{width:155,height:32,borderRadius:4,border:1,borderStyle:"solid",borderColor:"#E3E8EF"}} picker="month"  />
+      </div>
+      <div className="header">
+      <h2 className="title">918</h2>
       </div>
       <div className="list">
       <List
@@ -123,7 +124,7 @@ const Sales = () => {
                         overflow: "hidden",
                         fontSize: 20,
                         fontWeight: 500,
-                        fontColor: "#5C5C5C;",
+                        fontColor: "#5C5C5C",
                       }}
                       src={item.picture.large} />
                   }

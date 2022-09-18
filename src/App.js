@@ -22,6 +22,7 @@ function App() {
         <Sidebar />
         <Routes>
           
+          <Route exact path="/" element={<Dashboard/>} />
           <Route exact path="/dashboard" element={<Dashboard show={show} setShow={setShow} />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/menu" element={<Menu />} />

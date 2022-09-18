@@ -1,6 +1,6 @@
-import { DatePicker, Select, Space } from "antd";
+import { Select, Space } from "antd";
 import React from "react";
-import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Tooltip, Cell, } from "recharts";
 import { BsCircleFill} from "react-icons/bs";
 import { FaEllipsisV } from "react-icons/fa";
 
@@ -24,7 +24,8 @@ const SalesChart = () => {
           </button>
         </div>
         <div className="header ">
-          <h4
+         <div className="text">
+         <h4
             style={{
               fontSize: 16,
               fontWeight: 400,
@@ -34,6 +35,10 @@ const SalesChart = () => {
           >
             Todays Sale
           </h4>
+     
+          <h2 className="title" >258</h2>
+          
+         </div>
           <Space>
             <Select
               placeholder="Today"
@@ -50,7 +55,7 @@ const SalesChart = () => {
         </div>
       </div>
       <div style={{display:"flex"}}>
-        <PieChart width={200} height={300}>
+        <PieChart width={200} height={290}>
           <Pie
             data={data}
             cx={100}
@@ -85,7 +90,14 @@ const SalesChart = () => {
             <BsCircleFill style={{color:"#96ADFF"}} />
             25% Other
           </span>
-          <span><button>See details</button></span>
+          <span><button style={{
+            border: "none",
+            color: "#2D5BFF",
+            alignItems: "start",
+            display: "flex",
+            fontSize: 14,
+            fontWeight: 500,
+          }}>See details</button></span>
         </div>
       </div>
     </>
