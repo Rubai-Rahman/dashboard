@@ -3,7 +3,8 @@ import { FaEllipsisV } from "react-icons/fa";
 
 const Weather = () => {
   const [tempData, setTempData] = useState({});
-  const apikey = `ca87ea12c9dc4648215591c544c1920a`;
+  const apikey =process.env.REACT_APP_API_ID;
+
   const city= "dhaka"
 
   const temp = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
@@ -13,7 +14,7 @@ const Weather = () => {
       .then((res) => res.json())
       .then((data) =>setTempData(data));
   }, []);
-console.log(tempData)
+
 const url=`http://openweathermap.org/img/wn/${tempData?.weather?.[0]?.icon}@2x.png`
 
   return (
@@ -35,7 +36,7 @@ const url=`http://openweathermap.org/img/wn/${tempData?.weather?.[0]?.icon}@2x.p
         
         </div>
       </div>
-    </>
+    </> 
   );
 };
 
