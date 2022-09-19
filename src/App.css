@@ -70,14 +70,13 @@
   height: 100%;
   margin: 70px 0px 50px 264px;
   padding: 30px;
- 
 }
 
 .components {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6,auto);
+  grid-template-rows: repeat(6, auto);
   grid-gap: 20px;
   grid-template-areas:
     "totalSale totalSale totalSale totalSale salesChart salesChart"
@@ -96,7 +95,6 @@
 }
 .totalSale {
   grid-area: totalSale;
-  
 }
 .sales {
   grid-area: sales;
@@ -104,14 +102,13 @@
 }
 .weather {
   grid-area: weather;
-  max-height: 304px;
+  max-height: 354px;
 }
 .product {
   grid-area: product;
 }
 .salesChart {
   grid-area: salesChart;
-  
 }
 
 .alert {
@@ -127,7 +124,7 @@
   border: none;
   margin-left: 20px;
   font-size: 20px;
-  color:#9DACBE;
+  color: #9dacbe;
   background-color: white;
 }
 .title {
@@ -160,13 +157,45 @@
   margin-top: 10px;
 }
 
-.select{
+.select {
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
-  justify-content:center;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 70px;
 }
-.select >span{
+.select > span {
   margin-top: 10px;
+}
+
+.curentTemp {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding-left: 35px;
+  padding-top: 10px;
+}
+.temp {
+  display: flex;
+}
+.forecast {
+  display: flex;
+  justify-content: space-evenly;
+  width: 274px;
+  height: 168px;
+  margin: 20px;
+  font-size: 16px;
+  color: "#5C5C5C";
+  line-height: 24px;
+}
+.weatherr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 24px;
+}
+.try {
+  display: flex;
+  flex-direction: column;
+  gap: 10;
 }
