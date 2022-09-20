@@ -54,8 +54,8 @@ const SalesChart = () => {
           </Space>
         </div>
       </div>
-      <div style={{display:"flex"}}>
-        <PieChart width={200} height={290}>
+      <div  style={{display:"flex"}}>
+        <PieChart className="saleChart" width={200} height={290}>
           <Pie
             data={data}
             cx={100}
